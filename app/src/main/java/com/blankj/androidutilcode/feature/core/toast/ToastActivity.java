@@ -91,7 +91,7 @@ public class ToastActivity extends BaseBackActivity {
                 ToastUtils.showLong(R.string.toast_bg_color);
                 break;
             case R.id.btn_show_bg_resource:
-                ToastUtils.setBgResource(R.drawable.shape_round_rect);
+                ToastUtils.setBgResource(R.drawable.toast_shape_round_rect);
                 ToastUtils.showLong(R.string.toast_custom_bg);
                 break;
             case R.id.btn_show_span:

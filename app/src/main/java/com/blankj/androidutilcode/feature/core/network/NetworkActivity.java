@@ -23,13 +23,13 @@ import com.blankj.utilcode.util.ThreadUtils;
  */
 public class NetworkActivity extends BaseBackActivity {
 
-    TextView tvAboutNetwork;
-    TextView tvAboutNetworkAsync;
+    TextView               tvAboutNetwork;
+    TextView               tvAboutNetworkAsync;
     ThreadUtils.SimpleTask mSimpleTask = new ThreadUtils.SimpleTask<String>() {
         @Override
         public String doInBackground() {
             return "isAvailableByPing: " + NetworkUtils.isAvailableByPing()
-                    + "\ngetDomainAddress: " + NetworkUtils.getDomainAddress("baidu.com");
+                    + "\ngetBaiduDomainAddress: " + NetworkUtils.getDomainAddress("baidu.com");
         }
 
         @Override
@@ -96,7 +96,13 @@ public class NetworkActivity extends BaseBackActivity {
                 .appendLine("isWifiAvailable: " + NetworkUtils.isWifiAvailable())
                 .appendLine("getNetworkOperatorName: " + NetworkUtils.getNetworkOperatorName())
                 .appendLine("getNetworkTypeName: " + NetworkUtils.getNetworkType())
-                .append("getIPAddress: " + NetworkUtils.getIPAddress(true))
+                .appendLine("getIPv4Address: " + NetworkUtils.getIPAddress(true))
+                .appendLine("getIPv6Address: " + NetworkUtils.getIPAddress(false))
+                .appendLine("getBroadcastIpAddress: " + NetworkUtils.getBroadcastIpAddress())
+                .appendLine("getIpAddressByWifi: " + NetworkUtils.getIpAddressByWifi())
+                .appendLine("getGatewayByWifi: " + NetworkUtils.getGatewayByWifi())
+                .appendLine("getNetMaskByWifi: " + NetworkUtils.getNetMaskByWifi())
+                .append("getServerAddressByWifi: " + NetworkUtils.getServerAddressByWifi())
                 .create()
         );
     }

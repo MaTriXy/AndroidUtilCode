@@ -56,6 +56,7 @@
             android:windowSoftInputMode="stateHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -67,11 +68,23 @@
             android:launchMode="singleTop" />
         <activity
             android:name=".feature.core.activity.ActivityActivity"
-            android:icon="@drawable/ic_activity_icon"
+            android:icon="@drawable/activity_activity_icon"
             android:launchMode="singleTop"
-            android:logo="@drawable/ic_activity_logo" />
+            android:logo="@drawable/activity_activity_logo" />
         <activity
             android:name=".feature.core.activity.SubActivityActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".feature.core.adaptScreen.AdaptScreenActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".feature.core.adaptScreen.CloseAdaptActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".feature.core.adaptScreen.HeightActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".feature.core.adaptScreen.WidthActivity"
             android:launchMode="singleTop" />
         <activity
             android:name=".feature.core.app.AppActivity"
@@ -121,12 +134,23 @@
         <activity
             android:name=".feature.core.keyboard.KeyboardActivity"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".feature.core.log.LogActivity"
             android:launchMode="singleTop" />
+
+        <activity
+            android:name=".feature.core.metaData.MetaDataActivity"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="activity_meta_data"
+                android:value="ActivityMetaData" />
+        </activity>
         <activity
             android:name=".feature.core.network.NetworkActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".feature.core.path.PathActivity"
             android:launchMode="singleTop" />
         <activity
             android:name=".feature.core.permission.PermissionActivity"
@@ -147,6 +171,9 @@
             android:name=".feature.core.screen.ScreenActivity"
             android:launchMode="singleTop" />
         <activity
+            android:name=".feature.core.screen.ScreenAdaptActivity"
+            android:launchMode="singleTop" />
+        <activity
             android:name=".feature.core.sdcard.SDCardActivity"
             android:launchMode="singleTop" />
         <activity
@@ -161,6 +188,10 @@
         <activity
             android:name=".feature.core.toast.ToastActivity"
             android:launchMode="singleTop" />
+
+        <meta-data
+            android:name="app_meta_data"
+            android:value="AppMetaData" />
 
         <!-- sub -->
         <activity
@@ -181,19 +212,9 @@
             android:launchMode="singleTop" />
 
         <activity
-            android:name=".feature.sub.meta_data.MetaDataActivity"
-            android:launchMode="singleTop">
-            <meta-data
-                android:name="activity_meta_data"
-                android:value="activity" />
-        </activity>
-        <activity
             android:name=".feature.sub.pinyin.PinyinActivity"
-            android:launchMode="singleTop" />
-
-        <meta-data
-            android:name="app_meta_data"
-            android:value="1234" />
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape" />
 
     </application>
 

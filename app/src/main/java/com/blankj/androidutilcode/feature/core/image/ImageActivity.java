@@ -13,7 +13,7 @@ import android.view.View;
 
 import com.blankj.androidutilcode.Config;
 import com.blankj.androidutilcode.R;
-import com.blankj.androidutilcode.base.BaseBackActivity;
+import com.blankj.androidutilcode.base.BaseActivity;
 import com.blankj.utilcode.util.ImageUtils;
 import com.blankj.utilcode.util.ToastUtils;
 
@@ -28,9 +28,9 @@ import java.util.List;
  *     desc  : demo about ImageUtils
  * </pre>
  */
-public class ImageActivity extends BaseBackActivity {
+public class ImageActivity extends BaseActivity {
 
-    Bitmap src;
+    Bitmap          src;
     List<ImageBean> mList = new ArrayList<>();
 
     public static void start(Context context) {
@@ -50,13 +50,13 @@ public class ImageActivity extends BaseBackActivity {
 
     @Override
     public void initView(Bundle savedInstanceState, View contentView) {
-        getToolBar().setTitle(getString(R.string.demo_image));
+//        getToolBar().setTitle(getString(R.string.demo_image));
 
         RecyclerView rvImages = findViewById(R.id.rv_images);
         findViewById(R.id.btn_save).setOnClickListener(this);
 
-        src = ImageUtils.getBitmap(R.drawable.img_lena);
-        Bitmap round = ImageUtils.getBitmap(R.drawable.avatar_round);
+        src = ImageUtils.getBitmap(R.drawable.image_lena);
+        Bitmap round = ImageUtils.getBitmap(R.drawable.main_avatar_round);
         Bitmap watermark = ImageUtils.getBitmap(R.mipmap.ic_launcher);
 
         int width = src.getWidth();
@@ -88,7 +88,7 @@ public class ImageActivity extends BaseBackActivity {
         mList.add(new ImageBean(R.string.image_compress_by_quality_max_size, ImageUtils.compressByQuality(src, 10L * 1024)));// 10Kb
         mList.add(new ImageBean(R.string.image_compress_by_sample_size, ImageUtils.compressBySampleSize(src, 2)));
 
-        rvImages.setAdapter(new ImageAdapter(mList, R.layout.item_image));
+        rvImages.setAdapter(new ImageAdapter(mList, R.layout.item_image1));
         rvImages.setLayoutManager(new LinearLayoutManager(this));
     }
 
