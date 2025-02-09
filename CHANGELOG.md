@@ -1,3 +1,150 @@
+* `22/10/15` [add] Fix some issue. Publish v1.31.1
+* `21/12/06` [add] Publish v1.31.0
+* `21/05/13` [add] Support publish mavenCentral.
+* `21/02/22` [add] Fix ToastUtils rtl bug. Publish v1.30.6.
+* `20/11/16` [add] Add ImageUtils#save2Album support param of dirName.
+* `20/11/13` [add] Fix MessengerUtils ANR. Add NetworkUtils#getWifiScanResult, [add|remove]OnWifiChangedConsumer. Publish v1.30.5.
+* `20/10/29` [add] Fix MessengerUtils startService IllegalStateException. Publish v1.30.4.
+* `20/10/28` [add] Fix BusUtils ConcurrentModificationException. Publish v1.30.3.
+* `20/10/27` [add] Fix AppUtils#getAppSignatures. Add DeviceUtils#isDevelopmentSettingsEnabled. Publish v1.30.2.
+* `20/10/26` [add] Fix AppUtils#isAppForeground. Publish v1.30.1.
+* `20/10/24` [add] Publish v1.30.0.
+* `20/10/23` [fix] LanguageUtils crash on some device.
+* `20/10/21` [add] LogUtils.Config#setOnConsoleOutputListener, setOnFileOutputListener, addFileExtraHead. LogUtils.getCurrentLogFilePath.
+* `20/10/20` [opt] ToastUtils.
+* `20/10/12` [add] PermissionUtils#explain.
+* `20/10/10` [add] ClipboardUtils.
+* `20/10/08` [add] VolumeUtils.
+* `20/09/06` [add] DebouncingUtils#isValid.
+* `20/09/04` [fix] ToastUtils adapt SDK 30.
+* `20/05/28` [fix] IntentUtils#getInstallAppIntent file exist wrong. Publish v1.29.0.
+* `20/05/23` [fix] BusUtils#postSticky times not right. Publish v1.28.6.
+* `20/05/22` [add] IntentUtils#getInstallAppIntent support Uri param.
+* `20/05/21` [add] Publish bus plugin v2.6. Publish api plugin v1.4. Publish. Publish v1.28.5.
+* `20/05/19` [fix] FileUtils#copyOrMoveDird NPE.
+* `20/05/18` [add] IntentUtils#getLaunchAppDetailsSettingsIntent support isNewTask.
+* `20/05/17` [add] ImageUtils#save2Album, NetworkUtils#getSSID, UtilsTransActivity4MainProcess.
+* `20/05/03` [add] Publish bus plugin v2.5. Publish api plugin v1.3. Publish. Publish v1.28.4.
+* `20/04/30` [add] BaseItem support partialUpdate.
+* `20/04/29` [add] Publish plugin lib com.blankj:base-transform:1.0.
+* `20/04/28` [fix] LanguageUtils#applyLanguage.
+* `20/04/27` [fix] BarUtils#isNavBarVisible.
+* `20/04/26` [fix] Utils#init fit tinker. Publish v1.28.3.
+* `20/04/25` [fix] UriUtils#uri2File Unknown URI. Publish 1.28.2.
+* `20/04/24` [add] SnackbarUtils support show on the top; UriUtils#uri2InputStream.
+* `20/04/23` [fix] UriUtils#uri2File not support HW; TransActivity crash below 21.
+* `20/04/23` [fix] PhoneUtils#getSerial, PhoneUtils#getSerial crash on Android 10.
+* `20/04/20` [fix] ImageUtils#isImage.
+* `20/04/18` [fix] PermissionUtils#callback. Publish v1.28.1.
+* `20/04/17` [fix] ImageUtils#view2Bitmap, ImageUtils.getBitmap(InputStream).
+* `20/04/16` [add] ConvertUtils#int2HexString, hexString2Int.
+* `20/04/15` [add] UiMessageUtils' demo.
+* `20/04/13` [add] NumberUtils. Publish v1.28.0.
+* `20/04/12` [opt] TimeUtils#SDF_THREAD_LOCAL.
+* `20/04/11` [add] SDCardUtils#getXxTotalSize, SDCardUtils#getXxAvailableSize. FileUtils#getFsTotalSize, FileUtils#getFsAvailableSize.
+* `20/04/10` [fix] FileUtils#isFileExists; FragmentUtils#getTop bug. Publish v1.27.6.
+* `20/04/09` [add] UriUtils#res2Uri, UriUtils#uri2File support QQBrowser; ThreadUtils#getMainHandler; PathUtils#getxxPathExternalFirst.
+* `20/04/08` [fix] ActivityUtils#finish bug. Publish v1.27.5.
+* `20/04/08` [fix] CleanUtils clean dir not work. FileUtils#isFileExists. Publish v1.27.4.
+* `20/04/08` [fix] CrashUtils DefaultUncaughtExceptionHandler is wrong; LogUtils write file failed; Utils#getApp failed run on remote process. Publish v1.27.3.
+* `20/04/07` [mdf] GsonUtils#getGson() method public.
+* `20/04/04` [fix] ShadowUtils bug running on lower version devices. Publish v1.27.2.
+* `20/04/03` [fix] UtilsActivityLifecycleImpl#HashMap#remove IllegalStateException bug.
+* `20/04/02` [fix] PathUtils sdcard enable state is wrong; ActivityUtils finish activity wrong; Publish v1.27.1.
+* `20/03/31` [add] Publish v1.27.0.
+* `20/03/30` [add] BatteryUtils in subutil.
+* `20/03/27` [add] publish.gradle.
+* `20/03/24` [add] UtilsBridge to clean the utils.
+* `20/03/22` [upd] GsonUtils support custom gson.
+* `20/03/20` [add] ActivityUtils#addActivityLifecycleCallbacks, ActivityUtils#removeActivityLifecycleCallbacks.
+* `20/01/17` [upd] Leak Canary to v2.1.
+* `20/01/06` [add] ClickUtils#expandClickArea, ClickUtils#back2HomeFriendly
+* `19/11/30` [add] Publish bus plugin v2.4. Publish api plugin v1.2.
+* `19/11/28` [add] Publish v1.26.0.
+* `19/11/27` [add] Shadow demo.
+* `19/11/26` [add] MVP demo.
+* `19/11/22` [fix] Adapt the project for Gradle version of 6.0.
+* `19/10/30` [add] Publish bus plugin v2.3. Publish api plugin v1.1.
+* `19/10/24` [upd] Demo's UI.
+* `19/10/22` [add] NotificationUtils and demo.
+* `19/10/20` [add] UiMessageUtils.
+* `19/09/20` [add] ShadowUtils.
+* `19/08/27` [add] DebugUtils.
+* `19/08/26` [fix] PermissionUtils NPE.
+* `19/08/25` [upd] ImageUtils#getImageType. [add] LogUtils#getLogFiles. Publish v1.25.9.
+* `19/08/24` [fix] PhoneUtils#getIMEI crash on SDK 29.
+* `19/08/23` [add] ViewUtils#isLayoutRtl.
+* `19/08/22` [add] LogUtils#getLogFiles.
+* `19/08/13` [add] MapUtils and MapUtilsTest. Publish v1.25.8.
+* `19/08/12` [add] CollectionUtils and CollectionUtilsTest.
+* `19/08/11` [add] ArrayUtils and ArrayUtilsTest.
+* `19/08/09` [fix] https://www.virustotal.com/gui/home/upload with ESET-NOD32. Publish v1.25.7.
+* `19/08/08` [add] BusUtils#post tag support one-to-many. Publish v1.25.6.
+* `19/08/04` [add] ThreadUtils#Task support timeout.
+* `19/08/01` [upd] EncryptUtils#rsa.
+* `19/07/31` [add] DeviceUtils#getUniqueDeviceId, DeviceUtils#isSameDevice. Publish v1.25.5.
+* `19/07/30` [fix] ThreadUtils's task can only be executed once. PhoneUtils#getIMEI wrong.
+* `19/07/29` [fix] BusUtils post father class useless. KeyboardUtils#hideSoft bug. Publish v1.25.4.
+* `19/07/28` [add] NetworkUtils#(un)registerNetworkStatusChangedListener. Publish v1.25.3.
+* `19/07/27` [fix] ThreadUtils memory leak.
+* `19/07/26` [add] ContainerUtils. Publish v1.25.2.
+* `19/07/25` [fix] PermissionUtils' NullPointException.
+* `19/07/24` [fix] ZipUtils#unzipFile.
+* `19/07/23` [fix] ThreadUtils of cache pool. Publish v1.25.1.
+* `19/07/18` [add] README of ApiUtils and BusUtils.
+* `19/07/15` [add] Publish v1.25.0.
+* `19/07/14` [upd] Bus plugin for use BusUtils. Publish bus plugin v2.0.
+* `19/07/13` [add] Api plugin for use ApiUtils. Publish api plugin v1.0.
+* `19/07/09` [upd] The frame of project.
+* `19/07/06` [upd] BusUtils which behave same as EventBus.
+* `19/07/03` [add] ApiUtils which decoupling modules.
+* `19/06/30` [add] LanguageUtils support activity's class name.
+* `19/06/29` [add] ClickUtils#OnMultiClickListener, and remove dangerous function. Publish v1.24.6.
+* `19/06/28` [add] LanguageUtils. Publish v1.24.5.
+* `19/06/20` [fix] BusUtils' permission. Publish v1.24.4.
+* `19/06/19` [fix] UriUtils. Publish v1.24.3.
+* `19/06/18` [add] ClickUtils, ViewUtils.
+* `19/06/07` [fix] LogUtils file name contains ':'. Publish v1.24.2.
+* `19/06/06` [fix] LogUtils write to file. Publish v1.24.1.
+* `19/06/03` [fix] Refactoring framework. Publish v1.24.0.
+* `19/04/25` [fix] LogUtils delete due log.
+* `19/04/24` [upd] The swipe panel.
+* `19/03/17` [fix] The ugly UI.
+* `19/03/14` [fix] AdaptScreenUtils didn't work on some HaWei tablet.
+* `19/03/09` [fix] UriUtils#uri2File.
+* `19/03/08` [add] LogUtils support multi process. Publish v1.23.7.
+* `19/03/02` [fix] LogUtils#file.
+* `19/02/28` [fix] ImageUtils#calculateInSampleSize. Publish v1.23.6.
+* `19/02/26` [fix] UriUtils#uri2File. Publish v1.23.5.
+* `19/01/31` [add] HttpUtils.
+* `19/01/30` [add] RomUtils. Publish v1.23.4.
+* `19/01/29` [fix] LogUtils format json when json not start with '{'. Publish v1.23.3.
+* `19/01/28` [fix] KeyboardUtils#fixSoftInputLeaks don't work on the device of HuaWei.
+* `19/01/26` [fix] NetworkUtils#getNetworkType.
+* `19/01/25` [add] CloneUtils, PermissionUtils support request permission of WRITE_SETTINGS and DRAW_OVERLAYS. Publish v1.23.2.
+* `19/01/24` [add] BrightnessUtils and FlashlightUtils.
+* `19/01/23` [add] Modify the demo of utilcode use kotlin. Publish v1.23.1.
+* `19/01/22` [fix] AppUtils#installApp.
+* `19/01/17` [fix] Publish v1.23.0.
+* `19/01/16` [fix] BarUtils get Activity from view and delete the function of set status bar alpha.
+* `19/01/15` [add] ColorUtils.
+* `19/01/04` [add] CacheDiskStaticUtils, CacheDoubleStaticUtils, CacheMemoryStaticUtils.
+* `19/01/03` [add] SPStaticUtils.
+* `19/01/02` [fix] LogUtils log object. Publish v1.22.10.
+* `19/01/01` [add] GsonUtils.
+* `18/12/29` [add] AntiShakeUtils and VibrateUtils. Publish v1.22.9.
+* `18/12/28` [fix] ToastUtils show behind the dialog when close notification.
+* `18/12/27` [fix] LogUtils print StringBuilder failed.
+* `18/12/24` [fix] Utils$ActivityLifecycleImpl.consumeOnActivityDestroyedListener ConcurrentModificationException. Publish v1.22.7.
+* `18/12/22` [fix] AdaptScreenUtils#pt2px don't work when start webview. Publish v1.22.6.
+* `18/12/21` [add] LogUtils support print Map, Collection and Object to String.
+* `18/12/19` [fix] AdaptScreenUtils don't work in MIUI on Android 5.1.1. Publish v1.22.5.
+* `18/12/18` [fix] ToastUtils multi show crash when run API 25. Publish v1.22.4.
+* `18/12/18` [fix] ImageUtils recycle ret equals src. Publish v1.22.3.
+* `18/12/17` [fix] Utils$FileProvider4UtilCode not found. Publish v1.22.3.
+* `18/12/17` [fix] ToastUtils leak. Publish v1.22.2.
+* `18/12/09` [add] Component for the project.
+* `18/12/04` [add] BusUtils. Publish v1.22.1.
 * `18/11/18` [fix] ToastUtils don't show in the devices grater than API 24 when close the permission of notification. Publish v1.22.0.
 * `18/11/17` [fix] AppUtils#isAppInstalled don't work in no launcher app.
 * `18/11/16` [fix] ThreadUtils#cancel block the main thread.

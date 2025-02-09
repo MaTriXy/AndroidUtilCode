@@ -1,42 +1,39 @@
-includeModule ':app',
-        ':buildSrc',
-        ':bus-gradle-plugin',
-        ':launcher',
-        ':lib',
-        ':subutil',
-        ':utilcode'
+//includeBuild 'configPlugin'
 
-def includeModule(String... names) {
-    names.each {
-        def fileName
-        if (it.startsWith(":")) {
-            fileName = it.substring(1, it.length())
-        } else {
-            fileName = it;
-        }
-        File f = file(fileName)
-        if (!f.exists() || !f.isDirectory()) return
-        if (isModule(f)) {
-            include it
-        } else {
-            f.eachDir { dir ->
-                if (!isModule(dir)) return
-                include "${fileName}-${dir.name}"
-                project(":${fileName}-${dir.name}").projectDir = dir
-            }
-        }
-    }
-}
+//buildscript {
+////    ConfigUtils.init(gradle)
+//    repositories {
+//        mavenLocal()
+//        mavenCentral()
+//    }
+//
+//    dependencies {
+//        classpath 'com.blankj:buildSrc-plugin:1.0'
+//    }
+//}
 
-static boolean isModule(File dir) {
-    File[] files = dir.listFiles(new FilenameFilter() {
-        @Override
-        boolean accept(File file, String name) {
-            return name == 'build.gradle' || name == 'src'
-        }
-    })
-    return files.size() == 2
-}
+//apply plugin: "com.blankj.buildSrc"
 
 
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+//        jcenter() // Warning: this repository is going to shut down soon
+//        maven {url 'https://jetpack.io'} // Warning: this repository is going to shut down soon
+//    }
+//
+////    configurations.all {
+////        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+////
+////        resolutionStrategy.eachDependency {
+////            if (it.requested.group == 'com.android.support' && !it.requested.name.contains(
+////                    'multidex')) {
+////                it.useVersion Config.supportVersion
+////            }
+////        }
+////    }
+//}
 
+apply from: 'module_config.gradle'
